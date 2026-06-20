@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Vibrant Cyan to Purple Gradient -->
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <!-- Glass Shine Reflection -->
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer glowing hexagon -->
+  <polygon points="50,5 88,27 88,73 50,95 12,73 12,27" fill="url(#glow)" />
+  
+  <!-- Diagonal glass reflection -->
+  <polygon points="50,5 88,27 88,50 12,50 12,27" fill="url(#glass)" />
+  
+  <!-- Inner dark glass layer for depth -->
+  <polygon points="50,18 75,32 75,68 50,82 25,68 25,32" fill="#ffffff" opacity="0.15" />
+  
+  <!-- Crisp white checkmark -->
+  <path d="M 32 52 L 45 65 L 70 35" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0px 4px 4px rgba(0,0,0,0.25))"/>
+</svg>

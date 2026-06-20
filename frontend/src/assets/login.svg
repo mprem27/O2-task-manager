@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <filter id="bg-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+    <linearGradient id="orb-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="orb-grad-2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="glass-pane" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.65)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.1)"/>
+    </linearGradient>
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 1)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.1)"/>
+    </linearGradient>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Glowing Ambient Orbs -->
+  <circle cx="140" cy="120" r="110" fill="url(#orb-grad-1)" filter="url(#bg-blur)" opacity="0.85"/>
+  <circle cx="370" cy="280" r="130" fill="url(#orb-grad-2)" filter="url(#bg-blur)" opacity="0.75"/>
+
+  <!-- Main Floating Glass Dashboard -->
+  <g filter="url(#drop-shadow)">
+    <!-- Base Glass Plate -->
+    <rect x="60" y="70" width="380" height="260" rx="20" fill="url(#glass-pane)" stroke="url(#glass-border)" stroke-width="2"/>
+    
+    <!-- Top Glass Shine arc -->
+    <path d="M 60 90 Q 250 60 440 130 V 90 Q 440 70 420 70 H 80 Q 60 70 60 90 Z" fill="rgba(255,255,255,0.4)"/>
+    
+    <!-- UI Layout Inside the Glass -->
+    <!-- Sidebar -->
+    <rect x="85" y="95" width="80" height="210" rx="12" fill="rgba(255,255,255,0.3)" />
+    <circle cx="125" cy="125" r="16" fill="rgba(255,255,255,0.8)" />
+    <rect x="100" y="160" width="50" height="8" rx="4" fill="rgba(255,255,255,0.6)" />
+    <rect x="100" y="180" width="35" height="8" rx="4" fill="rgba(255,255,255,0.4)" />
+    <!-- Sidebar Accent Button -->
+    <rect x="95" y="260" width="60" height="25" rx="6" fill="url(#orb-grad-1)" opacity="0.9"/>
+
+    <!-- Right Content Area -->
+    <!-- Top Chart/Header Card -->
+    <rect x="185" y="95" width="230" height="90" rx="14" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+    <circle cx="230" cy="140" r="22" fill="none" stroke="url(#orb-grad-2)" stroke-width="6"/>
+    <path d="M 230 118 A 22 22 0 0 1 252 140" fill="none" stroke="url(#orb-grad-1)" stroke-width="6" stroke-linecap="round"/>
+    <rect x="270" y="125" width="110" height="10" rx="5" fill="rgba(255,255,255,0.9)"/>
+    <rect x="270" y="145" width="75" height="8" rx="4" fill="rgba(255,255,255,0.6)"/>
+
+    <!-- Bottom Left Task Card -->
+    <rect x="185" y="200" width="105" height="105" rx="14" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <rect x="200" y="220" width="50" height="8" rx="4" fill="rgba(255,255,255,0.8)"/>
+    <rect x="200" y="240" width="75" height="6" rx="3" fill="rgba(255,255,255,0.4)"/>
+    
+    <!-- Bottom Right Task Card (With glowing checkmark!) -->
+    <rect x="310" y="200" width="105" height="105" rx="14" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <circle cx="362" cy="252" r="18" fill="url(#orb-grad-1)" />
+    <path d="M 353 253 L 359 259 L 371 245" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0px 2px 2px rgba(0,0,0,0.2))"/>
+  </g>
+  
+  <!-- Floating Glass Checkmark Widget overlapping the edge -->
+  <g filter="url(#drop-shadow)">
+    <rect x="25" y="200" width="75" height="75" rx="16" fill="url(#glass-pane)" stroke="url(#glass-border)" stroke-width="2"/>
+    <path d="M 45 240 L 55 250 L 75 225" fill="none" stroke="url(#orb-grad-1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
